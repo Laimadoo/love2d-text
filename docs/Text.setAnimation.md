@@ -8,13 +8,17 @@ text:setAnimation(animation)
 ```
 ## **Arguments**
 `function animation`
-    Функция которая будет вызываться для каждого символа. Вид animation(char, index, total). Подробнее в [animation](docs/animation.md)
+- Функция которая будет вызываться для каждого символа. Вид animation(char, index, total). Подробнее в [animation](docs/animation.md)
+
     `string char`
-        Utf8 символ
+    - Utf8 символ
+
     `number index`
-        Номер символа
+    - Номер символа
+
     `number total`
-        Общее количество символов
+    - Общее количество символов
+
 ## **Returns**
 Ничего
 
@@ -26,9 +30,11 @@ text:setAnimation(name, params)
 ```
 ## **Arguments**
 `string name`
-    Имя встроенной анимации.
+- Имя встроенной анимации.
+
 `table params`
-    Таблица вида ключ-значение.
+- Таблица вида ключ-значение.
+
 ## **Returns**
 Ничего
 
