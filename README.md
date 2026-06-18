@@ -1,4 +1,4 @@
-A flexible text rendering object for LÖVE with support for colored text, per-character animation, text wrapping, anchoring, and shrink-to-fit behavior.
+Гибкий объект для рендеринга текста для LÖVE с поддержкой цветного текста, анимации каждого символа, переноса текста, привязки и уменьшения размера по размеру.
 
 ```lua
 Text = require("text")
