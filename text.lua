@@ -31,10 +31,11 @@ local utf8 = require("utf8")
 
 local builtinAnimations = {}
 
-builtinAnimations.sine = function(amplitude, speed, phaseOffset)
-    amplitude = amplitude or 5
-    speed = speed or 3
-    phaseOffset = phaseOffset or 0.5
+builtinAnimations.sine = function(params)
+    local amplitude, speed, phaseOffset
+    amplitude = params.amplitude or 5
+    speed = params.speed or 3
+    phaseOffset = params.phaseOffset or 0.5
     return function(char, index, total)
         local t = love.timer.getTime()
         local y = amplitude * math.sin(t * speed + (index - 1) * phaseOffset)
@@ -42,11 +43,11 @@ builtinAnimations.sine = function(amplitude, speed, phaseOffset)
     end
 end
 
-local setAnimation = function(self, anim, ...)
+local setAnimation = function(self, anim, params)
     if type(anim) == "function" then
         self.animFunc = anim
     elseif builtinAnimations[anim] then
-        self.animFunc = builtinAnimations[anim](...)
+        self.animFunc = builtinAnimations[anim](params)
     else
         self.animFunc = nil
     end

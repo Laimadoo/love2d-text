@@ -1,23 +1,16 @@
-A flexible text rendering object for LÖVE with support for colored text, per-character animation, text wrapping, anchoring, and shrink-to-fit behavior.
-
+Рисует текст со всеми установленными параметрами.
+## Function
+---
+## **Synopsis**
 ```lua
-Text = require("text")
+text:draw()
 ```
+## **Arguments**
+Нет.
+## **Returns**
+Ничего.
 
-## Constructors
-___
-
-| [Text:new](docs/Text.new.md) | Creates a new Text object. |
-| ---------------------------- | -------------------------- |
-
-## Functions
-___
-
-| [Object:draw](docs/Text.draw.md)                 | Рисует текст со всеми установленными параметрами. |
-| ------------------------------------------------ | ------------------------------------------------- |
-| [Object:setAnimation](docs/Text.setAnimation.md) | Устанавливает посимвольную анимацию тексту.       |
-
-## Parameters (text object)
+## Parameters
 ---
 `string text`
     Текстовая строка, которую будет рисовать объект. Может быть равно nil.
@@ -36,9 +29,9 @@ ___
 `number yScale`
     Коэффициент масштаба (ось y).
 `number anchorX`
-    Смещение начала координат (ось X) где 1 это ширина объкта.
+    Смещение начала координат (ось X) где 1 это ширина объекта.
 `number anchorY`
-    Смещение начала координат (ось Y) где 1 это ввсота объкта.
+    Смещение начала координат (ось Y) где 1 это высота объекта.
 `table color`
     Таблица, содержащая красный, зеленый, синий и необязательный альфа-канал, которые будут использоваться в качестве цветов для love.graphics.setColor в виде {красный, зелёный, синий, альфа}.
 `boolean shrinkWrap (false)`
@@ -80,7 +73,3 @@ ___
     Флаг динамичного wraplimit. Если равен `true` работает по принципу `math.min(wraplimit, максимальная ширина строки)`. Не меняет значение в таблице объекта.
 `boolean isVisible (true)`
     Флаг отрисовки. Если равен `false` не рисут объект.
-
-## License
-
-MIT
