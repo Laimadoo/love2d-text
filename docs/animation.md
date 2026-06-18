@@ -1,4 +1,4 @@
-Функция для анимирования символов в тексте. Устанавливается в [text:setAnimation()](docs/Text.setAnimation.md)
+Функция для анимирования символов в тексте. Устанавливается в [text:setAnimation()](Text.setAnimation.md)
 
 ## Function
 ---

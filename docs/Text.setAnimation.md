@@ -62,5 +62,5 @@ win:setAnimation(function(char, index, total)
 end)
 ```
 ## **Notes**
-Подробнее о своих анимациях в [animation](docs/animation.md)
-Подробнее о встроенных анимациях в [builtinAnimations](docs/builtinAnimations.md)
+Подробнее о своих анимациях в [animation](animation.md)
+Подробнее о встроенных анимациях в [builtinAnimations](builtinAnimations.md)

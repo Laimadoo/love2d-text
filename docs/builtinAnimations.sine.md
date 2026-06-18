@@ -14,4 +14,4 @@
 ## **Notes**
 Вся формула: `amplitude * math.sin(time * speed + index * phaseOffset)`
 
-Все встроенные анимации: [builtinAnimations](docs/builtinAnimations.md)
+Все встроенные анимации: [builtinAnimations](builtinAnimations.md)
