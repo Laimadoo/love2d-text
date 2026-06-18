@@ -8,7 +8,7 @@ text:setAnimation(animation)
 ```
 ## **Arguments**
 `function animation`
-- Функция которая будет вызываться для каждого символа. Вид animation(char, index, total). Подробнее в [animation](docs/animation.md)
+- Функция которая будет вызываться для каждого символа. Вид animation(char, index, total). Подробнее в [animation](animation.md)
 
     `string char`
     - Utf8 символ
