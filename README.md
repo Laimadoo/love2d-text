@@ -59,7 +59,7 @@ ___
 - Флаг отрисовки. Если равен `false` не рисут объект.
 
 
-## Parameters
+## Parameters (text object)
 ---
 `table text`
 - Таблица, содержащая цвета и строки для добавления к объекту, в виде {color1, string1, color2, string2, ...}.
