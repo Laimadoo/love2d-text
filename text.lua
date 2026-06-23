@@ -26,7 +26,7 @@
 ]]
 
 local newText = love.graphics.newTextBatch or love.graphics.newText
-local utf8 = require("utf8")
+local cp = "[%z\1-\x7F\xC2-\xF4][\x80-\xBF]*"
 
 
 local builtinAnimations = {}
@@ -152,7 +152,7 @@ local draw = function(textObj)
                 if type(v) == "table" then
                     c = v
                 else
-                    for _ in utf8.codes(v) do
+                    for _ in v:gmatch(cp) do
                         ci = ci + 1
                         charColor[ci] = c
                     end
@@ -167,9 +167,8 @@ local draw = function(textObj)
         local maxLineWidth = 0
         local total = 0
 
-        for _, code in utf8.codes(text) do
+        for char in text:gmatch(cp) do
             total = total + 1
-            local char = utf8.char(code)
             if char == "\n" then
                 if #curLine.chars > 0 then
                     if curLine.width > maxLineWidth then maxLineWidth = curLine.width end
